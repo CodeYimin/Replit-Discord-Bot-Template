@@ -7,8 +7,8 @@ import { MessageOnError } from "./guards/messageOnError";
 import { startReplitKeepalive } from "./replit";
 
 startReplitKeepalive();
-start().catch(() => {
-  console.error("Failed to start bot");
+start().catch((error) => {
+  console.error(error);
 });
 
 async function start() {
