@@ -33,7 +33,7 @@ Commands being run:
 - ```prisma db push --accept-data-loss && prisma generate```, watching ```./prisma/*.prisma```
 - ```prisma studio --browser none```
 
-## 🚀 Production
+## 🚀 Production (Run button on Repl.it)
 
 ```bash
 yarn prod
