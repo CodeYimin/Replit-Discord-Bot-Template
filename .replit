@@ -1,4 +1,4 @@
-run="npm run prod"
+run="yarn install && yarn prod"
 
 [nix]
 channel = "stable-22_05"

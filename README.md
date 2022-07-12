@@ -1,6 +1,6 @@
 # Repl.it Discord Bot Template
 
-A Discord bot template ready for **Plug & Play** hosting on repl.it.
+A Discord bot template ready for **Plug & Play** hosting on repl.it. Just setup ```BOT_TOKEN``` environment variable and click run.
 
 ## 📚 Tech Stack
 
@@ -23,23 +23,22 @@ yarn dev
 ```
 
 - Automatically **restarts bot** on ts/json change
-- Automatically **syncs database with prisma schema** on prisma schema change
-- Automatically **generates prisma client** on prisma schema change
-- Launches **Prisma Studio** (localhost:5555) without opening new tab
+- Automatically **syncs database with Prisma schema** on Prisma schema change
+- Automatically **generates Prisma Client** on Prisma schema change
+- Automatically **launches Prisma Studio** (localhost:5555) without opening new tab on Prisma schema change
 
 Commands being run:
 
 - ```ts-node ./src/main.ts```, watching ```*.json, *.ts```
-- ```prisma db push --accept-data-loss && prisma generate```, watching ```./prisma/*.prisma```
-- ```prisma studio --browser none```
+- ```prisma db push --accept-data-loss && prisma generate && prisma studio --browser none```, watching ```./prisma/*.prisma```
 
-## 🚀 Production (Run button on Repl.it)
+## 🚀 Production
 
 ```bash
 yarn prod
 ```
 
-- Syncs database with prisma schema
+- Syncs database with Prisma schema
 - Compiles all typescript into ```./dist```
 - Runs ```./dist/main.js```
 

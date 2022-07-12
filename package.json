@@ -8,9 +8,8 @@
   "main": "src/main.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"nodemon\" \"npm run prisma:dev\" \"npm run prisma:studio\"",
-    "prisma:dev": "nodemon -e prisma -w prisma -x \"npx prisma db push --accept-data-loss && npx prisma generate\"",
-    "prisma:studio": "npx prisma studio --browser none",
+    "dev": "concurrently \"nodemon\" \"npm run prisma:dev\"",
+    "prisma:dev": "nodemon -e prisma -w prisma -x \"npx prisma db push --accept-data-loss && npx prisma generate && npx prisma studio --browser none\"",
     "run:dist": "node ./dist/main.js",
     "build": "tsc --build",
     "prod": "npx prisma db push && npm run build && npm run run:dist"
