@@ -8,13 +8,11 @@
   "main": "src/main.ts",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"nodemon\" \"npm run docker\" \"npm run prisma:dev\"",
-    "dist": "node ./dist/main.js",
-    "build": "tsc --build",
+    "dev": "concurrently \"nodemon\" \"npm run prisma:dev\"",
     "prisma:dev": "nodemon -e prisma -w prisma -x \"npx prisma db push --accept-data-loss && npx prisma studio --browser none\"",
-    "prisma:prod": "npx prisma db push",
-    "docker": "docker-compose -f docker-compose.yml -p POSTGRES_DB_NAME up",
-    "prod": "concurrently \"npm run docker\" \"npm run prisma:prod\" \"npm run build && npm run dist\""
+    "run:dist": "node ./dist/main.js",
+    "build": "tsc --build",
+    "prod": "npx prisma db push && npm run build && npm run run:dist"
   },
   "dependencies": {
     "@discordx/importer": "^1.1.10",
